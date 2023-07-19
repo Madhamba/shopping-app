@@ -1,0 +1,10 @@
+.products-layout {
+  padding: 0.5rem 1rem;
+  background-color: burlywood;
+  height: 98vh;
+}
+
+.product-info {
+  display: flex;
+  gap: 2rem;
+}

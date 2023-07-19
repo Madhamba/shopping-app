@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { LoginRequest } from './interfaces/auth.interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -14,7 +15,8 @@ export class AuthComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService,
+    private _authService: AuthService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -27,9 +29,10 @@ export class AuthComponent implements OnInit {
   handleSubmit(): void {
     if (this.authForm.valid) {
       const data: LoginRequest = this.authForm.value;
-      this.authService.login(data).subscribe({
+      this._authService.login(data).subscribe({
         next: ({ token }) => {
           localStorage.setItem('token', token);
+          this.router.navigateByUrl('products/all');
         },
         error: (error) => {
           if (error.status === 401) {
