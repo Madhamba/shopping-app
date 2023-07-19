@@ -49,6 +49,16 @@
   position: relative;
 }
 
+.cart-badge {
+  padding: 0.3rem;
+  background-color: red;
+  border-radius: 9999px;
+  position: relative;
+  bottom: 1rem;
+  right: 1.5rem;
+  color: white;
+}
+
 @keyframes MoveUpDown {
   0%, 100% {
     transform: rotate(0deg);

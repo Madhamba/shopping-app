@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, OnInit } from '@angular/core';
 import { ProductsService } from './services/products.service';
 import { Product } from './interfaces/products.interface';
 import { Router } from '@angular/router';
@@ -21,6 +21,10 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
+  }
+
+  get cartLength(): number {
+    return this._cartService.getCart().length;
   }
 
   getProducts(): void {

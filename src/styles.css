@@ -7,12 +7,12 @@ body {
 
 .layout {
   padding: 0.5rem 1rem;
-  background-color: burlywood;
+  background-color: #D9D9D9;
 }
 
 .full-layout {
   padding: 0.5rem 1rem;
-  background-color: burlywood;
+  background-color: #D9D9D9;
   height: 98vh;
 }
 
@@ -23,13 +23,22 @@ body {
 }
 
 .btn {
-  padding: 0.5rem;
+  padding: 0.6rem 2rem;
   border-radius: 4px;
+  border: 0;
+  font-size: medium;
 }
 
 .btn-primary {
-  background-color: #001C30;
-  color: #64CCC5;
+  background-color: #3C6E71;
+  color: #D9D9D9;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #048d94;
+  color: #D9D9D9;
   cursor: pointer;
   font-weight: bold;
 }
@@ -42,22 +51,35 @@ body {
 }
 
 .btn-secondary {
-  background-color: #176B87;
-  color: white;
+  background-color: #827e7e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #989898;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .btn-icon {
   padding: 0.5rem;
   border-radius: 9999px;
-  background: #64CCC5;
+  background: #317f84;
+  cursor: pointer;
+}
+
+.btn-icon:hover {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background: #048d94;
   cursor: pointer;
 }
 
 .btn-icon-danger {
   padding: 0.5rem;
   border-radius: 9999px;
-  background: #d72a2a;
+  background: #fc0101f2;
   cursor: pointer;
   color: white;
 }

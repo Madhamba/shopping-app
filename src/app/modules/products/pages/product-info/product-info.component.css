@@ -1,4 +1,19 @@
 .product-info {
+  margin-top: 2rem;
   display: flex;
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .product-info {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .product-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

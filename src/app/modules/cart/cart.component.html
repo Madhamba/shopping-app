@@ -1,7 +1,7 @@
 <section class="full-layout">
   <div (click)="goToProducts()" class="title">
     <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-      <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path>
+      <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z" fill="rgba(255,255,255,1)"></path>
     </svg>
     <h1>Carrito de compras</h1>
   </div>
@@ -9,7 +9,7 @@
     <div *ngIf="cart.length > 0; else noProducts">
       <div class="cart-item" *ngFor="let product of cart">
         <div class="cart-title">
-          <img width="40px" [src]="product.image" [ariaLabel]="product.title" />
+          <img width="80px" [src]="product.image" [ariaLabel]="product.title" />
           <p>{{ product.title }}</p>
         </div>
         <div class="cart-title">
@@ -19,7 +19,7 @@
           </svg>
         </div>
       </div>
-      <h3>Total: {{ total | currency }}</h3>
+      <h2>Total: {{ total | currency }}</h2>
     </div>
     <ng-template #noProducts>
       <p>No hay productos agregados al carrito. ¡Agrega algunos!</p>
