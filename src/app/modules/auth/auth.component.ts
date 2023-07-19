@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class AuthComponent implements OnInit {
 
   authForm: FormGroup = new FormGroup({});
+  unauthorized: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -21,8 +22,8 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.authForm = this.formBuilder.group({
-      username: ['mor_2314', Validators.required],
-      password: ['83r5^_', Validators.required],
+      username: ['', Validators.required],
+      password: ['', Validators.required],
     });
   }
 
@@ -36,7 +37,10 @@ export class AuthComponent implements OnInit {
         },
         error: (error) => {
           if (error.status === 401) {
-            console.log('Unauthorized');
+            this.unauthorized = true;
+            setInterval(() => {
+              this.unauthorized = false;
+            }, 3000);
           }
         }
       });

@@ -44,8 +44,8 @@ body {
 }
 
 .btn-primary:disabled {
-  background-color: white;
-  color: #363B3C;
+  background-color: #048d9454;
+  color: #ffffff;
   cursor: not-allowed;
   font-weight: bold;
 }
