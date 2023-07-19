@@ -57,3 +57,12 @@
     transform: rotate(-30deg);
   }
 }
+
+@media (max-width: 768px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    columns: 1;
+    gap: 2rem;
+  }
+}

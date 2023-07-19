@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './services/products.service';
 import { Product } from './interfaces/products.interface';
 import { Router } from '@angular/router';
+import { CartService } from '../cart/services/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -15,6 +16,7 @@ export class ProductsComponent implements OnInit {
   constructor(
     private _productsService: ProductsService,
     private router: Router,
+    private _cartService: CartService,
   ) { }
 
   ngOnInit(): void {
@@ -34,14 +36,7 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
-    const cart = localStorage.getItem('cart');
-    if (cart) {
-      let cartObj = JSON.parse(cart) as Product[];
-      cartObj.push(product);
-      localStorage.setItem('cart', JSON.stringify(cartObj));
-    } else {
-      localStorage.setItem('cart', JSON.stringify([product]));
-    }
+    this._cartService.saveProduct(product);
   }
 
   goToCart(): void {

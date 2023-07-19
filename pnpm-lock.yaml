@@ -49,6 +49,9 @@ devDependencies:
   '@angular/compiler-cli':
     specifier: ^16.0.0
     version: 16.0.0(@angular/compiler@16.0.0)(typescript@5.0.2)
+  '@chiragrupani/karma-chromium-edge-launcher':
+    specifier: ^2.3.1
+    version: 2.3.1
   '@types/jasmine':
     specifier: ~4.3.0
     version: 4.3.0
@@ -1693,6 +1696,10 @@ packages:
       '@babel/helper-string-parser': 7.22.5
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
+    dev: true
+
+  /@chiragrupani/karma-chromium-edge-launcher@2.3.1:
+    resolution: {integrity: sha512-j9FXDa00jHwJr/VTuEhSowjjazLT6hQOoBuxgMfY/kEj5G5Ol2OmiyQSks3w+qH7CuXitx/ZLXDhpjWLGaLkNA==}
     dev: true
 
   /@colors/colors@1.5.0:
