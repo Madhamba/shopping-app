@@ -7,6 +7,7 @@ export const appRoutes: Route[] = [
     children: [
       { path: 'auth', loadChildren: () => import('src/app/modules/auth/auth.module').then(m => m.AuthModule) },
       { path: 'products', loadChildren: () => import('src/app/modules/products/products.module').then(m => m.ProductsModule) },
+      { path: 'cart', loadChildren: () => import('src/app/modules/cart/cart.module').then(m => m.CartModule) },
     ],
   }
 ];

@@ -1,13 +1,16 @@
-<section class="products-layout">
+<section class="layout">
   <h1>Productos</h1>
   <div class="product-grid">
-    <div
-      class="product-card"
-      (click)="productInfo(product.id)"
-      *ngFor="let product of products">
+    <div class="product-card" *ngFor="let product of products">
       <p class="product-title">{{ product.title }}</p>
       <p class="product-price">{{ product.price | currency }}</p>
-      <img width="80px" height="80px" [src]="product.image" [ariaLabel]="product.title" />
+      <img class="product-img" [src]="product.image" [ariaLabel]="product.title" />
+      <button (click)="productInfo(product.id)" class="btn btn-secondary">
+        Más información
+      </button>
+      <button (click)="addToCart(product)" class="btn btn-primary">
+        Agregar al carrito
+      </button>
     </div>
   </div>
 </section>

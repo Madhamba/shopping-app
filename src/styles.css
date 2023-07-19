@@ -5,6 +5,11 @@ body {
   font: 1em sans-serif;
 }
 
+.layout {
+  padding: 0.5rem 1rem;
+  background-color: burlywood;
+}
+
 .input {
   padding: 0.7rem;
   border-radius: 4px;
@@ -32,6 +37,8 @@ body {
 
 .btn-secondary {
   background-color: #176B87;
+  color: white;
+  cursor: pointer;
 }
 
 label {

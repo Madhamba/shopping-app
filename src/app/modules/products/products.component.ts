@@ -33,4 +33,8 @@ export class ProductsComponent implements OnInit {
     this.router.navigate(['products', id]);
   }
 
+  addToCart(product: Product) {
+    console.log('product: ', product);
+  }
+
 }

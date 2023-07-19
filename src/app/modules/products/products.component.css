@@ -1,8 +1,3 @@
-.products-layout {
-  padding: 0.5rem 1rem;
-  background-color: burlywood;
-}
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -12,8 +7,11 @@
 
 .product-card {
   padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  columns: 1;
+  gap: 0.5rem;
   background-color: white;
-  cursor: pointer;
   border-radius: 4px;
   text-align: center;
 }
@@ -26,4 +24,10 @@
 .product-price {
   font-weight: 600;
   font-size: medium;
+}
+
+.product-img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
 }
