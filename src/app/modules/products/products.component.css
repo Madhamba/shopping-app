@@ -16,9 +16,21 @@
   text-align: center;
 }
 
+.title-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .product-title {
   font-weight: 600;
   font-size: large;
+}
+
+.product-options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .product-price {
@@ -30,4 +42,18 @@
   margin-left: auto;
   margin-right: auto;
   height: 100px;
+}
+
+.cart-animation:hover {
+  animation: MoveUpDown 1s linear infinite;
+  position: relative;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
 }

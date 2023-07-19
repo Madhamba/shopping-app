@@ -10,6 +10,12 @@ body {
   background-color: burlywood;
 }
 
+.full-layout {
+  padding: 0.5rem 1rem;
+  background-color: burlywood;
+  height: 98vh;
+}
+
 .input {
   padding: 0.7rem;
   border-radius: 4px;
@@ -39,6 +45,27 @@ body {
   background-color: #176B87;
   color: white;
   cursor: pointer;
+}
+
+.btn-icon {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background: #64CCC5;
+  cursor: pointer;
+}
+
+.btn-icon-danger {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background: #d72a2a;
+  cursor: pointer;
+  color: white;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 label {

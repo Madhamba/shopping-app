@@ -33,8 +33,24 @@ export class ProductsComponent implements OnInit {
     this.router.navigate(['products', id]);
   }
 
-  addToCart(product: Product) {
-    console.log('product: ', product);
+  addToCart(product: Product): void {
+    const cart = localStorage.getItem('cart');
+    if (cart) {
+      let cartObj = JSON.parse(cart) as Product[];
+      cartObj.push(product);
+      localStorage.setItem('cart', JSON.stringify(cartObj));
+    } else {
+      localStorage.setItem('cart', JSON.stringify([product]));
+    }
+  }
+
+  goToCart(): void {
+    this.router.navigate(['cart']);
+  }
+
+  logOut(): void {
+    localStorage.clear();
+    this.router.navigate(['sign-in']);
   }
 
 }
